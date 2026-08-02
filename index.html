@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Akshit Mundra — Software Developer, AI/ML Engineer, and Full Stack Builder. Explore my projects, skills, and experience.">
+  <meta name="keywords" content="Akshit Mundra, portfolio, software developer, AI, ML, full stack, web developer">
+  <meta name="author" content="Akshit Mundra">
+  <meta property="og:title" content="Akshit Mundra — Portfolio">
+  <meta property="og:description" content="Software Developer & AI/ML Engineer building intelligent solutions.">
+  <meta property="og:type" content="website">
+  <title>Akshit Mundra — Software Developer & AI/ML Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+
+<body>
+
+  <!-- ===== Ambient Background ===== -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-blob ambient-blob--1"></div>
+    <div class="ambient-blob ambient-blob--2"></div>
+    <div class="ambient-blob ambient-blob--3"></div>
+  </div>
+
+  <!-- ===== Particle Canvas ===== -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__logo">Akshit</a>
+      <ul class="navbar__links">
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#projects" class="navbar__link">Projects</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+      </ul>
+      <div class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Mobile Nav ===== -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="mobile-nav__link">About</a>
+    <a href="#projects" class="mobile-nav__link">Projects</a>
+    <a href="#skills" class="mobile-nav__link">Skills</a>
+    <a href="#experience" class="mobile-nav__link">Experience</a>
+    <a href="#contact" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="hero__greeting">👋 Hello, I'm</p>
+          <h1 class="hero__name gradient-text">Akshit Mundra</h1>
+          <p class="hero__role">
+            <span id="typewriter"></span>
+            <span class="typewriter-cursor"></span>
+          </p>
+          <p class="hero__description">
+            Computer Science student at VIT Vellore, passionate about building intelligent systems with AI, Machine
+            Learning,
+            and modern full-stack technologies. I turn complex problems into elegant, production-ready solutions.
+          </p>
+          <div class="hero__cta-group">
+            <a href="#projects" class="btn btn--primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              View Projects
+            </a>
+            <a href="Akshit_AI_26.pdf" download class="btn btn--secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="hero__socials">
+            <a href="https://github.com/Axxhit" target="_blank" rel="noopener" class="hero__social-link"
+              aria-label="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/akshit-mundra" target="_blank" rel="noopener" class="hero__social-link"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="mailto:akshitmundra21@gmail.com" class="hero__social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </a>
+            <a href="https://leetcode.com/u/axxhit_btc/" target="_blank" rel="noopener" class="hero__social-link"
+              aria-label="LeetCode">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__image-wrapper">
+          <div class="hero__image-glow"></div>
+          <div class="hero__image-frame">
+            <img src="WhatsApp Image 2026-06-26 at 10.11.40 PM.jpeg" alt="Akshit Mundra profile photo" loading="eager">
+          </div>
+          <div class="hero__badge hero__badge--1">🤖 AI/ML</div>
+          <div class="hero__badge hero__badge--2">⚡ Full Stack</div>
+          <div class="hero__badge hero__badge--3">☁️ Cloud</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Building intelligent <span class="gradient-text">solutions</span></h2>
+        <p class="section-subtitle">A snapshot of who I am, what drives me, and where I come from.</p>
+      </div>
+      <div class="about__grid">
+        <div class="about__text-block reveal-left">
+          <p>
+            I'm a Computer Science undergraduate at <strong>Vellore Institute of Technology</strong>, deeply passionate
+            about the intersection of
+            <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and <strong>Full-Stack
+              Development</strong>. I thrive on turning complex, ambiguous problems
+            into elegant, production-ready systems.
+          </p>
+          <p>
+            My work spans from building agentic AI interview platforms with RAG pipelines and LangGraph, to engineering
+            mobile apps
+            that detect smartphone addiction using ML classifiers. I believe in crafting software that is not just
+            functional,
+            but robust, well-architected, and impactful.
+          </p>
+          <p>
+            Beyond code, I'm an active contributor to campus tech culture — organizing events with 200+ participants as
+            a
+            <strong>Core Member of the TAG Club</strong> and volunteering at VIT's Riviera Cultural Fest.
+          </p>
+          <div class="about__stats">
+            <div class="stat-card glass-card reveal stagger-1">
+              <div class="stat-card__number stat-card__number--cyan">12+</div>
+              <div class="stat-card__label">Projects</div>
+            </div>
+            <div class="stat-card glass-card reveal stagger-2">
+              <div class="stat-card__number stat-card__number--violet">8.20</div>
+              <div class="stat-card__label">CGPA</div>
+            </div>
+            <div class="stat-card glass-card reveal stagger-3">
+              <div class="stat-card__number stat-card__number--rose">3</div>
+              <div class="stat-card__label">Certifications</div>
+            </div>
+          </div>
+        </div>
+        <div class="about__edu-cards reveal-right">
+          <div class="edu-card glass-card">
+            <div class="edu-card__degree">B.Tech in Computer Science & Engineering</div>
+            <div class="edu-card__school">Vellore Institute of Technology, Vellore</div>
+            <div class="edu-card__meta">2022 – 2026 &nbsp;•&nbsp; CGPA: 8.20</div>
+          </div>
+          <div class="edu-card glass-card">
+            <div class="edu-card__degree">Senior Secondary (Class XII) — CBSE</div>
+            <div class="edu-card__school">CBSE Board, Bhilwara</div>
+            <div class="edu-card__meta">2021 &nbsp;•&nbsp; Percentage: 90.8%</div>
+          </div>
+          <div class="edu-card glass-card">
+            <div class="edu-card__degree">Certifications</div>
+            <div class="edu-card__school">Microsoft AI-900 &nbsp;•&nbsp; Oracle AI Foundations &nbsp;•&nbsp; Blockchain
+              & Web3</div>
+            <div class="edu-card__meta">Industry-recognized credentials</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Featured <span class="gradient-text">work</span></h2>
+        <p class="section-subtitle">A curated selection of projects showcasing AI/ML engineering, full-stack
+          development, and agentic systems.</p>
+      </div>
+      <div class="projects__grid">
+
+        <!-- Project 1: InterviewIQ -->
+        <div class="project-card glass-card reveal stagger-1" data-tilt>
+          <div class="project-card__icon project-card__icon--cyan">🎯</div>
+          <h3 class="project-card__title">InterviewIQ: Agentic Interview Platform</h3>
+          <p class="project-card__desc">
+            Built a RAG pipeline with PDF ingestion, sentence-transformers embeddings, and ChromaDB vector store with
+            PII scrubbing.
+            Engineered a LangGraph agent with RAG retrieval, web search, and LLM-based answer scoring. Created a 35-case
+            evaluation
+            suite covering hallucination, prompt injection, and PII leakage with GitHub Actions CI. Added voice
+            interview
+            feature using Web Speech API for real-time STT/TTS.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">Gemini</span>
+          </div>
+          <a href="https://github.com/Axxhit/InterviewIQ" target="_blank" rel="noopener" class="project-card__link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Project 2: AI Request Processing -->
+        <div class="project-card glass-card reveal stagger-2" data-tilt>
+          <div class="project-card__icon project-card__icon--violet">🔄</div>
+          <h3 class="project-card__title">AI-Powered Request Processing Workflow</h3>
+          <p class="project-card__desc">
+            Built an AI request processing system using Groq Llama 3.3 70B + Streamlit that classifies customer requests
+            and routes
+            them through 4 distinct multi-step remediation workflows with &gt;80% accuracy. Implemented confidence-based
+            routing with
+            JSON-mode structured outputs, Pydantic validation, retry logic, and human-in-the-loop review queue.
+            Full-stack prototype
+            with batch processing, Plotly analytics dashboard, and SQLite audit trail.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Pydantic</span>
+            <span class="tag">Groq API</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <a href="https://github.com/Axxhit/AI-Request-Processing-Workflow" target="_blank" rel="noopener"
+            class="project-card__link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Project 3: BARI -->
+        <div class="project-card glass-card reveal stagger-3" data-tilt>
+          <div class="project-card__icon project-card__icon--rose">📱</div>
+          <h3 class="project-card__title">BARI: Smartphone Addiction Detection</h3>
+          <p class="project-card__desc">
+            Developed an AI-based Android application that passively detects smartphone addiction risk in adolescents
+            using live
+            device usage data. Engineered a composite ML feature index aggregating 5 behavioural signals and trained a
+            Random Forest
+            classifier achieving 96.16% accuracy and 0.96 recall with zero false negatives. Built a full-stack system
+            with
+            Kotlin/Jetpack Compose Android client and Python Flask ML backend.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Python</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">Flask</span>
+          </div>
+          <a href="https://github.com/Axxhit" target="_blank" rel="noopener" class="project-card__link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Project 4: Share-Cloud -->
+        <div class="project-card glass-card reveal stagger-4" data-tilt>
+          <div class="project-card__icon project-card__icon--emerald">☁️</div>
+          <h3 class="project-card__title">Share-Cloud: Shareable Link Generator</h3>
+          <p class="project-card__desc">
+            A full-stack web application that enables users to upload files and instantly generate shareable links for
+            seamless
+            file distribution. Built with JavaScript, Node.js, and a clean user interface focused on simplicity and
+            speed.
+            Designed for quick one-click sharing workflows with no registration required.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+          <a href="https://github.com/Axxhit/Share-Cloud" target="_blank" rel="noopener" class="project-card__link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+      <div class="projects__view-all reveal">
+        <a href="https://github.com/Axxhit?tab=repositories" target="_blank" rel="noopener" class="btn btn--secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          View All Repositories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">Technical <span class="gradient-text">arsenal</span></h2>
+        <p class="section-subtitle">A comprehensive overview of my programming languages, frameworks, tools, and core
+          competencies.</p>
+      </div>
+      <div class="skills__grid">
+
+        <!-- Languages -->
+        <div class="skill-group glass-card reveal stagger-1">
+          <h3 class="skill-group__title"><span class="skill-group__title-icon">💻</span> Programming Languages</h3>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Java</span><span
+                class="skill-item__percent">90%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--cyan" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Python</span><span
+                class="skill-item__percent">88%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--violet" data-width="88"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">JavaScript</span><span
+                class="skill-item__percent">85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--rose" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">C++</span><span
+                class="skill-item__percent">75%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--emerald" data-width="75"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="skill-group glass-card reveal stagger-2">
+          <h3 class="skill-group__title"><span class="skill-group__title-icon">🌐</span> Web Development</h3>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">React.js / Next.js</span><span
+                class="skill-item__percent">85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--cyan" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Node.js / Express.js</span><span
+                class="skill-item__percent">82%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--violet" data-width="82"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">HTML / CSS</span><span
+                class="skill-item__percent">90%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--rose" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">FastAPI / Flask</span><span
+                class="skill-item__percent">78%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--emerald" data-width="78"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases & Cloud -->
+        <div class="skill-group glass-card reveal stagger-3">
+          <h3 class="skill-group__title"><span class="skill-group__title-icon">🗄️</span> Databases & Cloud</h3>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">MongoDB</span><span
+                class="skill-item__percent">80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--emerald" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">MySQL / SQLite</span><span
+                class="skill-item__percent">82%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--cyan" data-width="82"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Firebase</span><span
+                class="skill-item__percent">70%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--violet" data-width="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">AWS</span><span
+                class="skill-item__percent">65%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--rose" data-width="65"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Concepts -->
+        <div class="skill-group glass-card reveal stagger-4">
+          <h3 class="skill-group__title"><span class="skill-group__title-icon">🧠</span> AI/ML & Core Concepts</h3>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Machine Learning / Scikit-learn</span><span
+                class="skill-item__percent">85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--violet" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Agentic AI / LangGraph</span><span
+                class="skill-item__percent">80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--cyan" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">DSA & Algorithms</span><span
+                class="skill-item__percent">88%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--emerald" data-width="88"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">REST APIs / System Design</span><span
+                class="skill-item__percent">78%</span></div>
+            <div class="skill-bar">
+              <div class="skill-bar__fill skill-bar__fill--rose" data-width="78"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications -->
+      <div class="certifications reveal">
+        <div class="section-header">
+          <p class="section-label">Certifications</p>
+        </div>
+        <div class="certifications__grid">
+          <div class="cert-card glass-card reveal stagger-1">
+            <div class="cert-card__icon">🔷</div>
+            <div class="cert-card__title">AI-900: Azure AI Fundamentals</div>
+            <div class="cert-card__issuer">Microsoft Certified</div>
+          </div>
+          <div class="cert-card glass-card reveal stagger-2">
+            <div class="cert-card__icon">☁️</div>
+            <div class="cert-card__title">AI Foundations Associate</div>
+            <div class="cert-card__issuer">Oracle Cloud Infrastructure</div>
+          </div>
+          <div class="cert-card glass-card reveal stagger-3">
+            <div class="cert-card__icon">⛓️</div>
+            <div class="cert-card__title">Blockchain & Web3: Beginner's Guide</div>
+            <div class="cert-card__issuer">Professional Certification</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">My <span class="gradient-text">journey</span></h2>
+        <p class="section-subtitle">Professional experience, education milestones, and extracurricular involvement.</p>
+      </div>
+      <div class="timeline">
+
+        <!-- Timeline Item 1: VIT -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__dot"></div>
+          <div class="timeline-item__card glass-card">
+            <div class="timeline-item__date">2022 — 2026</div>
+            <div class="timeline-item__title">B.Tech in Computer Science & Engineering</div>
+            <div class="timeline-item__org">Vellore Institute of Technology, Vellore</div>
+            <ul class="timeline-item__details">
+              <li>Current CGPA: 8.20</li>
+              <li>Core Member — TAG (Technology & Gaming) Club: Organized 10+ campus-wide events with 200+ participants
+              </li>
+              <li>Volunteer — Riviera Cultural Fest: Contributed to Escape the Matrix & Bollywood Bash events (Matrix
+                Club)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Internship -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__dot"></div>
+          <div class="timeline-item__card glass-card">
+            <div class="timeline-item__date">Jun 2024 — Jul 2024</div>
+            <div class="timeline-item__title">SAP Intern</div>
+            <div class="timeline-item__org">Kanchan India Limited</div>
+            <ul class="timeline-item__details">
+              <li>Streamlined sales order processing by introducing automated validation rules, minimizing manual checks
+                and improving accuracy</li>
+              <li>Delivered real-time KPI dashboards for monitoring sales pipeline health</li>
+              <li>Simulated end-to-end sales order automation scenario achieving ~50% reduction in manual processing
+                time</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: CBSE -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__dot"></div>
+          <div class="timeline-item__card glass-card">
+            <div class="timeline-item__date">2021</div>
+            <div class="timeline-item__title">Senior Secondary (Class XII)</div>
+            <div class="timeline-item__org">CBSE Board, Bhilwara</div>
+            <ul class="timeline-item__details">
+              <li>Percentage: 90.8%</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__wrapper">
+        <div class="section-header reveal">
+          <p class="section-label">Get In Touch</p>
+          <h2 class="section-title">Let's build something <span class="gradient-text">amazing</span></h2>
+          <p class="section-subtitle">Have a project in mind, want to collaborate, or just say hello? I'd love to hear
+            from you.</p>
+        </div>
+
+        <!-- Formspree Contact Form -->
+        <form class="contact__form reveal" action="https://formspree.io/f/meeybwjb" method="POST" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or idea..."
+              required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New Portfolio Contact">
+          <button type="submit" class="btn btn--primary contact__submit-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            Send Message
+          </button>
+        </form>
+
+        <div class="contact__divider">or reach me directly</div>
+
+        <div class="contact__socials reveal">
+          <a href="https://github.com/Axxhit" target="_blank" rel="noopener" class="contact__social-link"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/akshit-mundra" target="_blank" rel="noopener"
+            class="contact__social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="mailto:akshitmundra21@gmail.com" class="contact__social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+          <a href="https://leetcode.com/u/axxhit_btc/" target="_blank" rel="noopener" class="contact__social-link"
+            aria-label="LeetCode">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+            </svg>
+          </a>
+          <a href="tel:+918306634036" class="contact__social-link" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">Designed & Built by Akshit Mundra with <span>♥</span> · 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
